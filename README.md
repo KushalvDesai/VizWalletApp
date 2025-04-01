@@ -1,6 +1,6 @@
 # VizCoin - Secure Token with Guardian Functionality
 
-VizCoin is a secure ERC20 token built on the Sepolia testnet with advanced guardian functionality for controlled transactions. The project features a modern web interface with dark mode support and seamless wallet integration, available as both a web application and a Chrome extension.
+VizCoin is a secure ERC20 token built on the Sepolia testnet with advanced guardian functionality for controlled transactions. The project features a modern web interface with dark mode support and seamless wallet integration, available as a web application.
 
 ## Features
 
@@ -10,7 +10,6 @@ VizCoin is a secure ERC20 token built on the Sepolia testnet with advanced guard
 - 🔗 **Wallet Integration**: Seamless MetaMask and WalletConnect integration
 - 📱 **Responsive Design**: Mobile-friendly interface
 - ⚡ **Fast Transactions**: Quick and efficient token transfers
-- 🔌 **Chrome Extension**: Easy access to your VizCoin wallet from any webpage
 
 ## Tech Stack
 
@@ -19,7 +18,6 @@ VizCoin is a secure ERC20 token built on the Sepolia testnet with advanced guard
 - **Blockchain**: Thirdweb SDK
 - **Network**: Sepolia Testnet
 - **Token**: ERC20 Standard
-- **Extension**: Chrome Extension Manifest V3
 
 ## Prerequisites
 
@@ -27,7 +25,6 @@ VizCoin is a secure ERC20 token built on the Sepolia testnet with advanced guard
 - npm or yarn
 - MetaMask or compatible Web3 wallet
 - Sepolia testnet ETH for gas fees
-- Chrome browser (for extension)
 
 ## Installation
 
@@ -46,7 +43,7 @@ npm install
 yarn install
 ```
 
-3. Create a `.env.local` file in the root directory and add your Thirdweb client ID:
+3. Create a `.env` file in the root directory and add your Thirdweb client ID:
 ```env
 NEXT_PUBLIC_THIRDWEB_CLIENT_ID=your_client_id_here
 ```
@@ -59,20 +56,6 @@ yarn dev
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Chrome Extension
-
-1. Build the extension:
-```bash
-npm run build
-# or
-yarn build
-```
-
-2. Load the extension in Chrome:
-   - Open Chrome and go to `chrome://extensions/`
-   - Enable "Developer mode" in the top right
-   - Click "Load unpacked" and select the `out` directory from your project
 
 ## Smart Contract
 
@@ -112,21 +95,6 @@ Address: 0x8E3784E3ec0b4C03d4B9CA6df1800c6D5aDedF9c
    - Use the sun/moon icon in the navbar to switch between light and dark modes
    - Theme preference is saved in localStorage
 
-### Chrome Extension
-
-1. **Access Wallet**
-   - Click the VizCoin extension icon in your Chrome toolbar
-   - Connect your wallet if not already connected
-
-2. **View Information**
-   - See your wallet address, balance, and allowance
-   - Copy your wallet address with one click
-   - Check your sending permissions
-
-3. **Manage Tokens**
-   - All web application features are available in the extension
-   - Quick access to your wallet from any webpage
-
 ## Development
 
 ### Project Structure
@@ -139,12 +107,8 @@ src/
 ├── components/          # React components
 │   ├── Navbar.tsx       # Navigation bar
 │   ├── AccountModal.tsx # Account management modal
-│   └── ExtensionPopup.tsx # Chrome extension popup
 ├── context/            # React context
-│   └── ThemeContext.tsx # Dark mode context
-└── public/             # Static files
-    ├── manifest.json   # Chrome extension manifest
-    └── background.js   # Extension background script
+    └── ThemeContext.tsx # Dark mode context
 ```
 
 ### Adding New Features
@@ -152,7 +116,6 @@ src/
 1. Create new components in the `components` directory
 2. Add new contract interactions in `AccountModal.tsx`
 3. Update the UI in `page.tsx` and `Navbar.tsx`
-4. For extension features, update `ExtensionPopup.tsx` and `background.js`
 
 ## Contributing
 
@@ -168,4 +131,3 @@ src/
 - [TailwindCSS](https://tailwindcss.com/) for the styling framework
 - [Next.js](https://nextjs.org/) for the React framework
 - [Sepolia Testnet](https://sepolia.dev/) for the test environment
-- [Chrome Extensions](https://developer.chrome.com/docs/extensions/) for the extension framework
