@@ -1,7 +1,6 @@
 "use client";
 
 import { Navbar } from "@/components/Navbar";
-import ExtensionPopup from '@/components/ExtensionPopup';
 
 export default function Home() {
   return (
@@ -74,7 +73,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <ExtensionPopup />
     </main>
   );
 }
